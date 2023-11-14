@@ -35,7 +35,7 @@ async fn main() -> Result<()> {
       .wrap(cors)
       .app_data(Data::new(state))
       .app_data(basic::Config::default().realm("Restricted area"))
-      .configure(|cfg| routes::init_routes(cfg))
+      .configure(routes::init_routes)
   })
   .bind(("0.0.0.0", 9192))?
   .run()

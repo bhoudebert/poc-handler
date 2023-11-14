@@ -1,5 +1,5 @@
 use actix_web::{get, web, HttpResponse};
-use log::{info, warn};
+use log::{warn};
 
 use crate::common::response::ApiError;
 
